@@ -170,9 +170,9 @@ end
 def player_numbers(team_name)
 	jersey_numbers = []
 	game_hash.each do |location, team_stats|
-	  binding.pry
 		if team_stats[:team_name] == team_name 
 		  team_stats.each do |team_info, players|
+		    binding.pry
 		    if team_info == :players
 		      players.each do |player_stats|
 		        jersey_numbers << player_stats[:number]
